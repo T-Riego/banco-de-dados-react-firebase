@@ -13,6 +13,7 @@ export default function Private({ children }){
     async function checkLogin(){
       const unsub = onAuthStateChanged(auth, (user) => {
          //se tem user logado
+         
          if(user){
           const userData = {
             uid: user.uid,
@@ -30,10 +31,14 @@ export default function Private({ children }){
            setSigned(false);
          }
       })
+         // O return do useEffect usa a variável unsub para limpar o listener.
+    return unsub;
     }
-
+    
     checkLogin();
+   
   }, [])
+  
 
   if(loading){
     return(
@@ -46,4 +51,5 @@ export default function Private({ children }){
   }
 
   return children;
+  
 }
