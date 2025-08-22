@@ -12,6 +12,11 @@
   font-size: 48px;
   margin-bottom: 8px;
 }
+.home-container h3{
+  font-size: 18px;
+  margin-bottom: 8px;
+  color:green;
+}
 
 .home-container span{
   margin-bottom: 28px;

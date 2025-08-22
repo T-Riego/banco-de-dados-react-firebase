@@ -39,6 +39,7 @@ export default function Home(){
 
   return(
     <div className="home-container">
+      <h3>Riegos.dev</h3><br/>
       <h1>Lista de tarefas</h1>
       <span>Gerencie sua agenda de forma fácil.</span>
 
