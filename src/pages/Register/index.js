@@ -10,24 +10,23 @@ export default function Register(){
   const navigate = useNavigate();
 
   async function handleRegister(e){
-    e.preventDefault();
+  e.preventDefault();
 
-    if(email !== '' && password !== ''){
-      await createUserWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        navigate('/admin', { replace: true })
-      })
-      .catch(() => {
-        console.log("ERRO AO FAZER O CADASTRO")
-      })
-
-
-    }else{
-      alert("Preencha todos os campos!")
-    }
-
-
+  if(email !== '' && password !== ''){
+    await createUserWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      // ALTERAÇÃO 1: Redireciona o usuário para a página de login ('/')
+      navigate('/', { replace: true });
+      alert("Usuário cadastrado com sucesso! Faça o login para continuar."); // Opcional: Dê um feedback ao usuário.
+    })
+    .catch((error) => {
+      // Melhoria: Exibir o erro no console para facilitar a depuração
+      console.log("ERRO AO FAZER O CADASTRO: ", error);
+    })
+  }else{
+    alert("Preencha todos os campos!")
   }
+}
 
 
   return(
