@@ -31,6 +31,7 @@ export default function Register(){
 
   return(
     <div className="home-container">
+      <h3>Riegos.dev</h3><br/>
       <h1>Cadastre-se</h1>
       <span>Vamos criar sua conta!</span>
 

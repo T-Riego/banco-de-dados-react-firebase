@@ -8,6 +8,11 @@
 .admin-container h1{
   margin-bottom: 28px;
 }
+.admin-container h3{
+  font-size: 18px;
+  margin-bottom: 8px;
+  color:green;
+}
 
 .btn-register{
   margin-bottom: 28px;
