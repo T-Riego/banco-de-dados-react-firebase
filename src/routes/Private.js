@@ -39,6 +39,8 @@ export default function Private({ children }){
    
   }, [])
   
+  // LOG 5: Verifique o estado de `signed` no final da execução
+  console.log("No render: signed é", signed);
 
   if(loading){
     return(
